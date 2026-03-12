@@ -1,0 +1,26 @@
+<svg width="480" height="853" viewBox="0 0 480 853" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cyber-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#120040;stop-opacity:1" />
+      <stop offset="55%" style="stop-color:#0a0025;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#050010;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="480" height="853" fill="url(#cyber-bg)"/>
+
+  <!-- Glow circle -->
+  <circle cx="240" cy="150" r="120" fill="#00FFFF" opacity="0.2"/>
+
+  <!-- Title placeholder -->
+  <text x="240" y="720" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="#00FFFF" text-anchor="middle">3300</text>
+  <text x="240" y="780" font-family="Arial, sans-serif" font-size="48" fill="#FF00FF" text-anchor="middle">CYPHER</text>
+
+  <!-- Sample badge -->
+  <circle cx="60" cy="60" r="30" fill="#0a0030" stroke="#00FFFF" stroke-width="2"/>
+  <text x="60" y="60" font-family="Arial, sans-serif" font-size="14" fill="#00FFFF" text-anchor="middle" dominant-baseline="middle">3300</text>
+
+  <!-- Watermark -->
+  <text x="240" y="830" font-family="Arial, sans-serif" font-size="10" fill="#00FFFF" opacity="0.5" text-anchor="middle">SAMPLE POSTER - CYBER THEME</text>
+</svg>
