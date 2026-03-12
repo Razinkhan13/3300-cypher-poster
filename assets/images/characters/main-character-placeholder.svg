@@ -1,0 +1,49 @@
+<svg width="165" height="248" viewBox="0 0 165 248" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="char-gradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFB800"/>
+      <stop offset="50%" stop-color="#FF6B00"/>
+      <stop offset="100%" stop-color="#CC2200"/>
+    </linearGradient>
+    <radialGradient id="face-gradient" cx="48%" cy="38%" r="60%">
+      <stop offset="0%" stop-color="#FFB800"/>
+      <stop offset="100%" stop-color="#CC2200"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Head -->
+  <ellipse cx="82" cy="40" rx="35" ry="37" fill="url(#face-gradient)" opacity="0.93"/>
+
+  <!-- Hair -->
+  <path d="M47 30 Q62 8 96 18 Q90 4 70 7 Q52 10 47 30Z" fill="#CC2200" opacity="0.88"/>
+  <path d="M96 18 Q108 22 112 35 Q108 18 96 18Z" fill="#CC2200" opacity="0.6"/>
+
+  <!-- Ears -->
+  <ellipse cx="47" cy="40" rx="5" ry="7" fill="#FF6B00" opacity="0.8"/>
+  <ellipse cx="117" cy="40" rx="5" ry="7" fill="#FF6B00" opacity="0.8"/>
+
+  <!-- Neck -->
+  <rect x="71" y="73" width="22" height="20" rx="5" fill="url(#face-gradient)" opacity="0.86"/>
+
+  <!-- T-shirt -->
+  <path d="M37 96 Q29 134 27 196 L51 200 L51 160 Q82 168 113 160 L113 200 L137 196 Q135 134 127 96 Q107 82 82 86 Q57 82 37 96Z" fill="url(#char-gradient)" opacity="0.89"/>
+
+  <!-- Arms -->
+  <path d="M37 98 Q28 108 17 158 L29 162 L51 112Z" fill="#FF6B00" opacity="0.76"/>
+  <path d="M127 98 Q136 108 147 158 L135 162 L113 112Z" fill="#FF6B00" opacity="0.76"/>
+
+  <!-- Hands -->
+  <ellipse cx="21" cy="172" rx="9" ry="7" fill="url(#face-gradient)" opacity="0.86"/>
+  <ellipse cx="143" cy="172" rx="9" ry="7" fill="url(#face-gradient)" opacity="0.86"/>
+
+  <!-- Legs -->
+  <path d="M51 198 L46 244 L62 246 L82 206 L102 246 L118 244 L113 198Z" fill="#CC2200" opacity="0.86"/>
+
+  <!-- Belt -->
+  <rect x="49" y="194" width="66" height="7" rx="3" fill="rgba(0,0,0,0.45)"/>
+  <rect x="76" y="195" width="10" height="5" rx="1.5" fill="#FFB800" opacity="0.9"/>
+
+  <!-- Shoes -->
+  <ellipse cx="55" cy="244" rx="12" ry="5" fill="#CC2200" opacity="0.7"/>
+  <ellipse cx="109" cy="244" rx="12" ry="5" fill="#CC2200" opacity="0.7"/>
+</svg>
