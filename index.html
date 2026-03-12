@@ -840,4 +840,65 @@
       // multi-burst
       setTimeout(() => spawnBurst(cx * 0.35, cy * 1.1, 60), 150);
       setTimeout(() => spawnBurst(cx * 1.65, cy * 1.1, 60), 300);
-      showToast
+      showToast('💥 Burst!');
+    }
+
+    /* ── EXPORT PNG ── */
+    function exportPNG() {
+      // Hide toolbar temporarily
+      const toolbar = document.getElementById('toolbar');
+      const toast   = document.getElementById('toast');
+      toolbar.style.display = 'none';
+      toast.style.display = 'none';
+
+      // Flash effect
+      const flash = document.createElement('div');
+      flash.className = 'flash';
+      document.body.appendChild(flash);
+
+      setTimeout(() => {
+        html2canvas(poster, {
+          scale: 2,
+          backgroundColor: null,
+          logging: false
+        }).then(canvas => {
+          const link = document.createElement('a');
+          link.download = '3300-CYPHER-POSTER.png';
+          link.href = canvas.toDataURL('image/png');
+          link.click();
+
+          // Restore toolbar
+          toolbar.style.display = '';
+          toast.style.display = '';
+          flash.remove();
+          showToast('📸 Poster exported!');
+        }).catch(err => {
+          console.error('Export failed:', err);
+          toolbar.style.display = '';
+          toast.style.display = '';
+          flash.remove();
+          showToast('❌ Export failed. Loading library...');
+          loadHtml2Canvas();
+        });
+      }, 100);
+    }
+
+    /* ── TOAST ── */
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2400);
+    }
+
+    /* ── LOAD html2canvas from CDN if export is used ── */
+    function loadHtml2Canvas() {
+      if (window.html2canvas) return;
+      const script = document.createElement('script');
+      script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js';
+      script.onload = () => showToast('✅ Ready to export!');
+      document.head.appendChild(script);
+    }
+  </script>
+</body>
+</html>
