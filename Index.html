@@ -840,4 +840,34 @@
       // multi-burst
       setTimeout(() => spawnBurst(cx * 0.35, cy * 1.1, 60), 150);
       setTimeout(() => spawnBurst(cx * 1.65, cy * 1.1, 60), 300);
-      showToast
+      showToast('💥 Particle burst!');
+    }
+
+    /* ── EXPORT PNG ── */
+    function exportPNG() {
+      const toolbar = document.getElementById('toolbar');
+      toolbar.style.display = 'none';
+      // Flash effect
+      const flash = document.createElement('div');
+      flash.className = 'flash';
+      document.body.appendChild(flash);
+      setTimeout(() => flash.remove(), 500);
+
+      setTimeout(() => {
+        // Use html2canvas or similar library in production
+        // For now, show a message
+        showToast('📸 Screenshot feature - use browser screenshot tool!');
+        toolbar.style.display = '';
+      }, 100);
+    }
+
+    /* ── TOAST NOTIFICATION ── */
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2500);
+    }
+  </script>
+</body>
+</html>
